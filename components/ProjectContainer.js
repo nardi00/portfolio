@@ -63,6 +63,7 @@ const ProjectContainer = styled.div`
         font-family: Outfit;
         font-size: 30px;
         font-weight: 400;
+        cursor: pointer;
       }
     }
   }
