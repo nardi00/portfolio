@@ -20,7 +20,7 @@ const ProjectContainer = styled.div`
   max-width: 800px;
   max-height: 100%;
   display: flex;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
   margin-top: 5rem;
   .left-side {
     width: 200px;

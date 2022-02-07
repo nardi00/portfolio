@@ -53,8 +53,9 @@ const Title = styled.h1`
 `;
 
 const Projects = styled.div`
-  padding-left: 15%;
-  padding-right: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   @media (max-width: 650px) {
     padding: 0;
   }
