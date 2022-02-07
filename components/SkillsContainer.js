@@ -1,5 +1,19 @@
 import React from "react";
 import styled from "styled-components";
+import Image from "next/image";
+import {
+  javascriptLoader,
+  reactLoader,
+  typescriptLoader,
+  htmlLoader,
+  cssLoader,
+  pythonLoader,
+  webpackLoader,
+  babelLoader,
+  gitLoader,
+  figmaLoader,
+  npmLoader,
+} from "./loader";
 
 export default function Skills() {
   return (
@@ -7,9 +21,123 @@ export default function Skills() {
       <div className="left-side">Skills</div>
       <div className="right-side">
         <h1>Línguas e frameworks</h1>
-        <div className="icons" ></div>
-        <h1>Ferramentas</h1>
-        <div className="icons" ></div>
+        <div className="icons">
+          <a>
+            <Image
+              className="icon"
+              loader={htmlLoader}
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+              alt="html"
+              width={40}
+              height={40}
+            />
+          </a>
+
+          <a>
+            <Image
+              className="icon"
+              loader={cssLoader}
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+              alt="css"
+              width={40}
+              height={40}
+            />
+          </a>
+
+          <a>
+            <Image
+              className="icon"
+              loader={javascriptLoader}
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+              alt="javascript"
+              width={40}
+              height={40}
+            />
+          </a>
+          <a>
+            <Image
+              className="icon"
+              loader={reactLoader}
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+              alt="react"
+              width={40}
+              height={40}
+            />
+          </a>
+          <a>
+            <Image
+              className="icon"
+              loader={typescriptLoader}
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+              alt="typescript"
+              width={40}
+              height={40}
+            />
+          </a>
+          <a>
+            <Image
+              className="icon"
+              loader={pythonLoader}
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+              alt="python"
+              width={40}
+              height={40}
+            />
+          </a>
+        </div>
+        <h1>Ferramentas de desenvolvimento</h1>
+        <div className="icons">
+          <a>
+            <Image
+              className="icon"
+              loader={webpackLoader}
+              src="https://raw.githubusercontent.com/devicons/devicon/d00d0969292a6569d45b06d3f350f463a0107b0d/icons/webpack/webpack-original-wordmark.svg"
+              alt="webpack"
+              width={60}
+              height={60}
+            />
+          </a>
+          <a>
+            <Image
+              className="icon"
+              loader={babelLoader}
+              src="https://www.vectorlogo.zone/logos/babeljs/babeljs-icon.svg"
+              alt="babel"
+              width={40}
+              height={40}
+            />
+          </a>
+          <a>
+            <Image
+              className="icon"
+              loader={gitLoader}
+              src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
+              alt="git"
+              width={40}
+              height={40}
+            />
+          </a>
+          <a>
+            <Image
+              className="icon"
+              loader={figmaLoader}
+              src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg"
+              alt="figma"
+              width={40}
+              height={40}
+            />
+          </a>
+          <a>
+            <Image
+              className="icon"
+              loader={npmLoader}
+              src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/npm/npm-original-wordmark.svg"
+              alt="npm"
+              width={40}
+              height={40}
+            />
+          </a>
+        </div>
       </div>
     </SkillsContainer>
   );
@@ -44,7 +172,11 @@ const SkillsContainer = styled.div`
     & > div {
       height: 150px;
       display: flex;
-      background-color: white;
+      align-items: center;
+      a {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
     }
     .icons {
       margin-bottom: 2rem;

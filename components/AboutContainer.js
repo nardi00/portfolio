@@ -6,7 +6,7 @@ export default function About() {
     <AboutContainer>
           <div className="left-side">Sobre</div>
           <div className="right-side">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A, interdum fames praesent ullamcorper condimentum quis at morbi mauris. Scelerisque a sed arcu pharetra non velit. A sed aenean mauris amet diam. Amet, sed facilisi ut dignissim volutpat commodo sed.</p>
+          <p>Sou um desenvolvedor Front End, moro em São Paulo e sou apaixonado pelo processo criativo de desenvolver interfaces visualmente atrativas. Atualmente procuro oportunidades de aprender novos conceitos, tecnologias e ferramentas a fim de criar a melhor experiência possível. Fora do mundo tecnológico, gosto de filmes, música e idiomas. </p>
           </div>
     </AboutContainer>
   )
