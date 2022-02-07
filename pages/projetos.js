@@ -45,7 +45,7 @@ export default function projects() {
           />
           <ProjectContainer
             number={"04"}
-            title={"Timer"}
+            title={"Timer widget"}
             url={"/projetos/timer"}
             thumbnail={thumbTimer}
           />
@@ -78,7 +78,7 @@ const MainContainer = styled.main`
 
 const Title = styled.h1`
   font-size: 45px;
-  font-family: DM Mono;
+  font-family: DM Sans;
   font-weight: 600;
   color: white;
 `;

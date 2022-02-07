@@ -22,7 +22,7 @@ const AboutContainer = styled.div`
     width: 200px;
     height: 100%;
     font-size: 40px;
-    font-family: DM Mono;
+    font-family: DM Sans;
     font-weight: 500;
     display: flex;
     justify-content: flex-end;
