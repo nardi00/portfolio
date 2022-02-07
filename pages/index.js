@@ -1,6 +1,8 @@
 import Head from "next/head";
 import styled from "styled-components";
 import Link from "next/link";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 export default function Home() {
   return (
@@ -12,7 +14,12 @@ export default function Home() {
       </Head>
 
       <Header>
-        <Links>icons</Links>
+        <Links><a href="https://www.linkedin.com/in/guilherme-nardi-7a3406217/" >
+          <LinkedInIcon fontSize="medium" />
+        </a>
+        <a href="https://github.com/nardi00" >
+          <GitHubIcon fontSize="medium" />
+        </a></Links>
         <Contact>
           <a
             href="mailto:guilhermenardi3@outlook.com"
@@ -64,6 +71,12 @@ const Header = styled.div`
 const Links = styled.div`
   width: 200px;
   color: white;
+  & > a {
+    margin-left: 1em;
+    margin-right: 1em;
+    cursor: pointer;
+    color: white;
+  }
 `;
 
 const Contact = styled.button`
