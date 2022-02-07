@@ -13,7 +13,14 @@ export default function Home() {
 
       <Header>
         <Links>icons</Links>
-        <Contact>Contato</Contact>
+        <Contact>
+          <a
+            href="mailto:guilhermenardi3@outlook.com"
+            style={{ textDecoration: "none", color: "white", transition: "0.5s"}}
+          >
+            Contato
+          </a>
+        </Contact>
       </Header>
 
       <MainContainer>
@@ -23,7 +30,7 @@ export default function Home() {
             Front-end developer based in <strong>São Paulo, Brazil</strong>
           </Description>
           <Nav>
-            <Link href="/sobre" passHref >
+            <Link href="/sobre" passHref>
               <Button>Sobre</Button>
             </Link>
             <Link href="/projetos" passHref>
