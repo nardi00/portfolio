@@ -1,17 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
-
-export default function About() {
-  return (
-    <AboutContainer>
-          <div className="left-side">Sobre</div>
-          <div className="right-side">
-          <p>Sou um desenvolvedor Front End, moro em São Paulo e sou apaixonado pelo processo criativo de desenvolver interfaces visualmente atrativas. Atualmente procuro oportunidades de aprender novos conceitos, tecnologias e ferramentas a fim de criar a melhor experiência possível. Fora do mundo tecnológico, gosto de filmes, música e idiomas. </p>
-          </div>
-    </AboutContainer>
-  )
-}
-
+import React from "react";
+import styled from "styled-components";
 const AboutContainer = styled.div`
   max-width: 800px;
   max-height: 100%;
@@ -39,3 +27,21 @@ const AboutContainer = styled.div`
     width: 600px;
   }
 `;
+
+export default function About() {
+  return (
+    <AboutContainer>
+      <div className="left-side">Sobre</div>
+      <div className="right-side">
+        <p>
+          Sou um desenvolvedor Front End, moro em São Paulo e sou apaixonado
+          pelo processo criativo de desenvolver interfaces visualmente
+          atrativas. Atualmente procuro oportunidades de aprender novos
+          conceitos, tecnologias e ferramentas a fim de criar a melhor
+          experiência possível. Fora do mundo tecnológico, gosto de filmes,
+          música e idiomas.{" "}
+        </p>
+      </div>
+    </AboutContainer>
+  );
+}

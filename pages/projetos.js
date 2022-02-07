@@ -4,10 +4,41 @@ import Navbar from "../components/Navbar";
 import Head from "next/head";
 import ProjectContainer from "../components/ProjectContainer";
 import thumbPaletter from "../public/paletter.png";
-import thumbEcommerce from '../public/ecommerce.png'
-import thumbNews from '../public/news.png'
-import thumbTimer from '../public/timer.png'
-import thumbWeather from '../public/weather.png'
+import thumbEcommerce from "../public/ecommerce.png";
+import thumbNews from "../public/news.png";
+import thumbTimer from "../public/timer.png";
+import thumbWeather from "../public/weather.png";
+
+const MainContainer = styled.main`
+  min-width: 100vw;
+  min-height: 100vh;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 1rem;
+  @media (max-width: 650px) {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+`;
+
+const Title = styled.h1`
+  font-size: 45px;
+  font-family: DM Sans;
+  font-weight: 600;
+  color: white;
+`;
+
+const Projects = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (max-width: 650px) {
+    padding: 0;
+  }
+`;
 
 export default function projects() {
   return (
@@ -35,7 +66,7 @@ export default function projects() {
           />
           <ProjectContainer
             number={"02"}
-            title={"Ecommerce"}
+            title={"Recordrrr"}
             url={"/projetos/ecommerce"}
             thumbnail={thumbEcommerce}
             githubURL={"https://github.com/nardi00/shopping-cart"}
@@ -70,34 +101,3 @@ export default function projects() {
     </div>
   );
 }
-
-const MainContainer = styled.main`
-  min-width: 100vw;
-  min-height: 100vh;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  padding-left: 20%;
-  padding-right: 20%;
-  padding-top: 1rem;
-  @media (max-width: 650px) {
-    padding-left: 12%;
-    padding-right: 12%;
-  }
-`;
-
-const Title = styled.h1`
-  font-size: 45px;
-  font-family: DM Sans;
-  font-weight: 600;
-  color: white;
-`;
-
-const Projects = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @media (max-width: 650px) {
-    padding: 0;
-  }
-`;

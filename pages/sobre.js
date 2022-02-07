@@ -1,26 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import Navbar from '../components/Navbar';
-import AboutContainer from '../components/AboutContainer'
-import SkillsContainer from '../components/SkillsContainer'
-
-export default function about() {
-  return (
-    <div
-      style={{
-        backgroundImage: "linear-gradient(to right, #222222 0%, black 100%)",
-      }}
-    >
-      <Navbar />
-      <MainContainer>
-        <About>
-          <AboutContainer />
-          <SkillsContainer />
-        </About>
-      </MainContainer>
-    </div>
-  )
-}
+import React from "react";
+import styled from "styled-components";
+import Navbar from "../components/Navbar";
+import AboutContainer from "../components/AboutContainer";
+import SkillsContainer from "../components/SkillsContainer";
 
 const MainContainer = styled.main`
   min-width: 100vw;
@@ -44,4 +26,22 @@ const About = styled.div`
   @media (max-width: 650px) {
     padding: 0;
   }
-`
+`;
+
+export default function about() {
+  return (
+    <div
+      style={{
+        backgroundImage: "linear-gradient(to right, #222222 0%, black 100%)",
+      }}
+    >
+      <Navbar />
+      <MainContainer>
+        <About>
+          <AboutContainer />
+          <SkillsContainer />
+        </About>
+      </MainContainer>
+    </div>
+  );
+}

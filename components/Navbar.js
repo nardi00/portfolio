@@ -4,38 +4,6 @@ import Link from "next/link";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
-export default function Navbar() {
-  return (
-    <Header>
-      <Links>
-        <a href="https://www.linkedin.com/in/guilherme-nardi-7a3406217/">
-          <LinkedInIcon fontSize="medium" />
-        </a>
-        <a href="https://github.com/nardi00">
-          <GitHubIcon fontSize="medium" />
-        </a>
-      </Links>
-      <Link href="/" passHref>
-        <Title>/GUILHERME NARDI</Title>
-      </Link>
-      <Menu>
-        <ul>
-          <li>
-            <Link href="/sobre" passHref>
-              sobre
-            </Link>
-          </li>
-          <li>
-            <Link href="/projetos" passHref>
-              projetos
-            </Link>
-          </li>
-        </ul>
-      </Menu>
-    </Header>
-  );
-}
-
 const Header = styled.div`
   min-width: 100%;
   height: 100px;
@@ -74,7 +42,7 @@ const Menu = styled.div`
     & > li a:hover {
       color: red;
     }
-    & > li:not(:first-child) a{
+    & > li:not(:first-child) a {
       padding-left: 1rem;
     }
   }
@@ -90,3 +58,35 @@ const Title = styled.h1`
     font-size: 18px;
   }
 `;
+
+export default function Navbar() {
+  return (
+    <Header>
+      <Links>
+        <a href="https://www.linkedin.com/in/guilherme-nardi-7a3406217/">
+          <LinkedInIcon fontSize="medium" />
+        </a>
+        <a href="https://github.com/nardi00">
+          <GitHubIcon fontSize="medium" />
+        </a>
+      </Links>
+      <Link href="/" passHref>
+        <Title>/GUILHERME NARDI</Title>
+      </Link>
+      <Menu>
+        <ul>
+          <li>
+            <Link href="/sobre" passHref>
+              sobre
+            </Link>
+          </li>
+          <li>
+            <Link href="/projetos" passHref>
+              projetos
+            </Link>
+          </li>
+        </ul>
+      </Menu>
+    </Header>
+  );
+}

@@ -2,9 +2,58 @@ import React from "react";
 import styled from "styled-components";
 import Navbar from "../../components/Navbar";
 import Head from "next/head";
-import thumb from '../../public/timer.png'
+import thumb from "../../public/timer.png";
 import Image from "next/image";
+import {
+  javascriptLoader,
+  cssLoader,
+  electronLoader,
+} from "../../components/loader";
 
+const MainContainer = styled.main`
+  min-width: 100vw;
+  min-height: 100vh;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 1rem;
+  .description-container {
+    font-size: 25px;
+    font-family: DM Sans;
+    color: white;
+    a {
+      color: white;
+    }
+    .details {
+      margin-top: 1rem;
+    }
+    .stack {
+      display: flex;
+      height: 100px;
+      margin-top: 1rem;
+      margin-top: 1rem;
+      a {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+  @media (max-width: 650px) {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+`;
+
+const Title = styled.h1`
+  font-size: 45px;
+  font-family: DM Sans;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+`;
 
 export default function paletter() {
   return (
@@ -20,32 +69,58 @@ export default function paletter() {
       </Head>
       <Navbar />
       <MainContainer>
-        <Title>Timer widget</Title>
-        <Image src={thumb} alt="thumbnail paletter"/>
+        <Image src={thumb} alt="thumbnail paletter" />
+        <Title>Timer</Title>
+        <div className="description-container">
+          <p>
+            Widget nativo montado em javascript e css através do Electron. O
+            aplicativo foi criado com o design e funcionalidade simples em
+            mente.
+          </p>
+          <p className="details">
+            Website:{" "}
+            <a href="https://github.com/nardi00/electron-timer">
+              https://github.com/nardi00/electron-timer
+            </a>
+          </p>
+          <p className="details">Plataforma: Windows, Linux e Mac </p>
+          <div>
+            <p className="details">Stack: </p>
+            <div className="stack">
+              <a>
+                <Image
+                  className="icon"
+                  loader={javascriptLoader}
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                  alt="javascript"
+                  width={40}
+                  height={40}
+                />
+              </a>
+              <a>
+                <Image
+                  className="icon"
+                  loader={electronLoader}
+                  src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/electron/electron-original.svg"
+                  alt="electron"
+                  width={40}
+                  height={40}
+                />
+              </a>
+              <a>
+                <Image
+                  className="icon"
+                  loader={cssLoader}
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+                  alt="css"
+                  width={40}
+                  height={40}
+                />
+              </a>
+            </div>
+          </div>
+        </div>
       </MainContainer>
     </div>
   );
 }
-
-const MainContainer = styled.main`
-  min-width: 100vw;
-  min-height: 100vh;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  padding-left: 20%;
-  padding-right: 20%;
-  padding-top: 1rem;
-  @media (max-width: 650px) {
-    padding-left: 12%;
-    padding-right: 12%;
-  }
-`;
-
-const Title = styled.h1`
-  font-size: 45px;
-  font-family: DM Mono;
-  font-weight: 600;
-  color: white;
-  margin-bottom: 3rem;
-`;
