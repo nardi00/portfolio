@@ -2,8 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import Image from "next/image";
+import LinkIcon from '@mui/icons-material/Link';
+import GitHubIcon from "@mui/icons-material/GitHub";
 
-export default function Project({ title, number, url, thumbnail }) {
+export default function Project({
+  title,
+  number,
+  url,
+  thumbnail,
+  githubURL,
+  website,
+}) {
   return (
     <ProjectContainer>
       <div className="left-side">{number}</div>
@@ -23,14 +32,29 @@ export default function Project({ title, number, url, thumbnail }) {
           <Link href={url} passHref>
             <h1>{title}</h1>
           </Link>
-          <div>
-            <p>icons</p>
-          </div>
+          <Links>
+            <a href={githubURL}>
+              <GitHubIcon fontSize="medium" />
+            </a>
+            <a href={website}>
+              <LinkIcon fontSize="medium" />
+            </a>
+          </Links>
         </div>
       </div>
     </ProjectContainer>
   );
 }
+
+const Links = styled.div`
+  color: white;
+  & > a {
+    margin-left: 1em;
+    margin-right: 1em;
+    cursor: pointer;
+    color: white;
+  }
+`;
 
 const ProjectContainer = styled.div`
   max-width: 800px;

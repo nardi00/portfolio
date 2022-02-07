@@ -71,6 +71,9 @@ const Menu = styled.div`
       text-decoration: none;
       color: white;
     }
+    & > li a:hover {
+      color: red;
+    }
     & > li:not(:first-child) a{
       padding-left: 1rem;
     }

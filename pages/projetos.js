@@ -30,30 +30,40 @@ export default function projects() {
             title={"Paletter"}
             url={"/projetos/paletter"}
             thumbnail={thumbPaletter}
+            githubURL={"https://github.com/nardi00/paletter"}
+            website={"https://nardi00.github.io/paletter/"}
           />
           <ProjectContainer
             number={"02"}
             title={"Ecommerce"}
             url={"/projetos/ecommerce"}
             thumbnail={thumbEcommerce}
+            githubURL={"https://github.com/nardi00/shopping-cart"}
+            website={"https://nardi00.github.io/shopping-cart/"}
           />
           <ProjectContainer
             number={"03"}
             title={"News"}
             url={"/projetos/news"}
             thumbnail={thumbNews}
+            githubURL={"https://github.com/nardi00/news"}
+            website={"https://nardi00.github.io/news/"}
           />
           <ProjectContainer
             number={"04"}
             title={"Timer widget"}
             url={"/projetos/timer"}
             thumbnail={thumbTimer}
+            githubURL={"https://github.com/nardi00/electron-timer"}
+            website={"https://github.com/nardi00/electron-timer"}
           />
           <ProjectContainer
             number={"05"}
             title={"Weather"}
             url={"/projetos/weather"}
             thumbnail={thumbWeather}
+            githubURL={"https://github.com/nardi00/react-weather-app"}
+            website={"https://nardi00.github.io/react-weather-app/"}
           />
         </Projects>
       </MainContainer>
