@@ -22,7 +22,7 @@ export default function projects() {
         <Projects>
           <ProjectContainer number={"01"} title={"Paletter"}/>
           <ProjectContainer number={"02"} title={"Ecommerce Cart"}/>
-          <ProjectContainer />
+          <ProjectContainer number={"03"} title={"Widget Timer"}/>
         </Projects>
         
       </MainContainer>

@@ -6,3 +6,16 @@
   padding: 0;
   overflow-x: hidden;
 }
+
+body::-webkit-scrollbar {
+  width: 3px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #111111;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #383838;
+  border-radius: 10px;
+}
