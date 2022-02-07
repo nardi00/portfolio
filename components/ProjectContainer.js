@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Navbar({title, number}) {
+export default function Project({title, number}) {
   return (
     <ProjectContainer>
           <div className="left-side">{number}</div>

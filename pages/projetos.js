@@ -24,7 +24,6 @@ export default function projects() {
           <ProjectContainer number={"02"} title={"Ecommerce Cart"}/>
           <ProjectContainer number={"03"} title={"Widget Timer"}/>
         </Projects>
-        
       </MainContainer>
     </div>
   );
@@ -47,7 +46,7 @@ const MainContainer = styled.main`
 
 const Title = styled.h1`
   font-size: 45px;
-  font-family: Outfit;
+  font-family: DM Mono;
   font-weight: 600;
   color: white;
 `;
