@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styled from "styled-components";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,23 +13,25 @@ export default function Home() {
 
       <Header>
         <Links>icons</Links>
-        <Contact>Contact</Contact>
+        <Contact>Contato</Contact>
       </Header>
 
       <MainContainer>
         <Main>
           <Title>/GUILHERME NARDI</Title>
           <Description>
-          Front-end developer based in São Paulo, Brazil
+            Front-end developer based in <strong>São Paulo, Brazil</strong>
           </Description>
           <Nav>
-          <Button>Sobre</Button>
-          <Button>Projetos</Button>
+            <Link href="/sobre" passHref >
+              <Button>Sobre</Button>
+            </Link>
+            <Link href="/projetos" passHref>
+              <Button>Projetos</Button>
+            </Link>
           </Nav>
         </Main>
       </MainContainer>
-
-
     </Screen>
   );
 }
@@ -66,8 +69,12 @@ const Contact = styled.button`
   color: white;
   padding: 0.5rem;
   transition: 0.5s;
-  &:hover{
+  background: none;
+  &:hover {
     color: red;
+  }
+  @media (max-width: 650px) {
+    font-size: 15px;
   }
 `;
 
@@ -78,20 +85,27 @@ const MainContainer = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
-`
+`;
 
 const Main = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`
+`;
 const Title = styled.h1`
   font-size: 60px;
   font-family: DM Mono;
   font-weight: 600;
   color: white;
-`
+
+  @media (max-width: 940px) {
+    font-size: 45px;
+  }
+  @media (max-width: 560px) {
+    font-size: 35px;
+  }
+`;
 const Description = styled.div`
   width: 100%;
   font-family: DM Sans;
@@ -99,16 +113,29 @@ const Description = styled.div`
   margin-top: 1rem;
   font-size: 40px;
   color: white;
-`
+  & > strong {
+    color: red;
+  }
+  @media (max-width: 940px) {
+    font-size: 30px;
+  }
+  @media (max-width: 660px) {
+    font-size: 22px;
+  }
+`;
 
 const Nav = styled.div`
-  width: 50%;
+  width: 40%;
   padding-left: 1rem;
   padding-right: 1rem;
   display: flex;
   justify-content: space-between;
   margin-top: 8rem;
-`
+  @media (max-width: 660px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+`;
 
 const Button = styled.button`
   font-family: DM Sans;
@@ -118,7 +145,14 @@ const Button = styled.button`
   background: none;
   cursor: pointer;
   transition: 0.5s;
-  &:hover{
+  padding: 0.5rem;
+  &:hover {
     color: red;
   }
-`
+  @media (max-width: 940px) {
+    font-size: 25px;
+  }
+  @media (max-width: 660px) {
+    font-size: 20px;
+  }
+`;
