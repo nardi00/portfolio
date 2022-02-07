@@ -1,19 +1,35 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
+import Link from "next/link";
+import Image from "next/image";
 
-export default function Project({title, number}) {
+export default function Project({ title, number, url, thumbnail }) {
   return (
     <ProjectContainer>
-          <div className="left-side">{number}</div>
-          <div className="right-side">
-            <div style={{width: "600px", height: "400px", backgroundColor: "white"}} ></div>
-            <div>
-              <h1>{title}</h1>
-              <div><p>icons</p></div>
-            </div>
+      <div className="left-side">{number}</div>
+      <div className="right-side">
+        <Link href={url} passHref>
+          <a>
+            <Image
+              src={thumbnail}
+              alt="thumbnail"
+              responsive
+              width={1500}
+              height={720}
+            />
+          </a>
+        </Link>
+        <div>
+          <Link href={url} passHref>
+            <h1>{title}</h1>
+          </Link>
+          <div>
+            <p>icons</p>
           </div>
+        </div>
+      </div>
     </ProjectContainer>
-  )
+  );
 }
 
 const ProjectContainer = styled.div`
@@ -22,6 +38,9 @@ const ProjectContainer = styled.div`
   display: flex;
   margin-bottom: 1rem;
   margin-top: 5rem;
+  & > a {
+    cursor: pointer;
+  }
   .left-side {
     width: 200px;
     height: 100%;
@@ -32,10 +51,9 @@ const ProjectContainer = styled.div`
     justify-content: center;
     padding-right: 2rem;
     color: white;
-    
   }
   .right-side {
-    & > div{
+    & > div {
       display: flex;
       justify-content: space-between;
       align-items: center;

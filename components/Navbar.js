@@ -1,11 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import Link from 'next/link';
 
 export default function Navbar() {
   return (
     <Header>
         <Links>icons</Links>
-        <Title>/GUILHERME NARDI</Title>
+        <Link href="/" passHref >
+          <Title>/GUILHERME NARDI</Title>
+        </Link>
         <Contact>Contato</Contact>
     </Header>
   )
@@ -51,6 +54,7 @@ const Title = styled.h1`
   font-family: DM Mono;
   font-size: 20px;
   font-weight: 600;
+  cursor:pointer;
   @media (max-width: 650px) {
     font-size: 18px;
   }  
