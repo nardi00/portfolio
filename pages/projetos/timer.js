@@ -79,10 +79,10 @@ export default function paletter() {
       <Navbar />
       <MainContainer initial={{opacity: 0, x: -200, y: 0}} animate={{opacity: 1, x: 0, y: 0}} exit={{opacity: 0, x: 0, y: -100}} transition={transition} >
         <Image src={thumb} alt="thumbnail paletter" />
-        <Title>Timer</Title>
+        <Title>Timer widget</Title>
         <div className="description-container">
           <p>
-            Widget nativo montado em javascript e css através do Electron. O
+            Widget nativo montado em JavaScript e CSS através do Electron. O
             aplicativo foi criado com o design e funcionalidade simples em
             mente.
           </p>
