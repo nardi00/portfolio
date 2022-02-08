@@ -23,7 +23,7 @@ const SkillsContainer = styled.div`
   margin-bottom: 1rem;
   margin-top: 5rem;
   .left-side {
-    width: 200px;
+    max-width: 200px;
     height: 100%;
     font-size: 40px;
     font-family: DM Sans;
@@ -34,9 +34,12 @@ const SkillsContainer = styled.div`
     padding-right: 2rem;
     color: white;
     border-right: 1px solid white;
+    @media(max-width: 500px) {
+      display: none;
+    }
   }
   .right-side {
-    width: 600px;
+    max-width: 600px;
     color: white;
     & > h1 {
       font-size: 20px;
@@ -53,6 +56,10 @@ const SkillsContainer = styled.div`
     }
     .icons {
       margin-bottom: 2rem;
+    }
+    @media(max-width: 500px) {
+      display: inline;
+      font-size: 18px;
     }
   }
 `;

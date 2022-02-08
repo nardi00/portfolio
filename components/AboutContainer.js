@@ -7,7 +7,7 @@ const AboutContainer = styled.div`
   margin-bottom: 1rem;
   margin-top: 5rem;
   .left-side {
-    width: 200px;
+    max-width: 200px;
     height: 100%;
     font-size: 40px;
     font-family: DM Sans;
@@ -18,13 +18,19 @@ const AboutContainer = styled.div`
     padding-right: 2rem;
     color: white;
     border-right: 1px solid white;
+    @media(max-width: 500px) {
+      display: none;
+    }
   }
   .right-side {
     font-size: 30px;
     font-family: DM Sans;
     font-weight: 600;
     color: white;
-    width: 600px;
+    max-width: 600px;
+    @media(max-width: 500px) {
+      font-size: 18px;
+    }
   }
 `;
 

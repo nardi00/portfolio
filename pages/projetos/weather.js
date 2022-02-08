@@ -10,6 +10,7 @@ import {
   cssLoader,
 } from "../../components/loader";
 import { motion } from 'framer-motion'
+import Footer from '../../components/Footer'
 
 const MainContainer = styled(motion.main)`
   min-width: 100vw;
@@ -24,6 +25,9 @@ const MainContainer = styled(motion.main)`
     font-size: 25px;
     font-family: DM Sans;
     color: white;
+    @media (max-width: 500px) {
+      font-size: 18px;
+    }
     a {
       color: white;
     }
@@ -47,15 +51,17 @@ const MainContainer = styled(motion.main)`
   }
 `;
 
-const Title = styled.h1`
+const Title = styled(motion.h1)`
   font-size: 45px;
   font-family: DM Sans;
   font-weight: 600;
   color: white;
   margin-bottom: 3rem;
   margin-top: 3rem;
+  @media (max-width: 500px) {
+    font-size: 25px;
+  }
 `;
-
 const transition = { duration: 0.6, ease: [0.6, 0.01, -0.05, 0.9] };
 
 export default function paletter() {
@@ -123,6 +129,7 @@ export default function paletter() {
           </div>
         </div>
       </MainContainer>
+      <Footer />
     </div>
   );
 }

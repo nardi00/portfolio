@@ -38,6 +38,9 @@ const Menu = styled.div`
       transition: 0.5s;
       text-decoration: none;
       color: white;
+      @media (max-width: 600px) {
+        font-size: 14px;
+      }
     }
     & > li a:hover {
       color: red;
@@ -56,6 +59,9 @@ const Title = styled.h1`
   cursor: pointer;
   @media (max-width: 650px) {
     font-size: 18px;
+  }
+  @media (max-width: 600px) {
+    font-size: 12px;
   }
 `;
 

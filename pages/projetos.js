@@ -29,6 +29,9 @@ const Title = styled.h1`
   font-family: DM Sans;
   font-weight: 600;
   color: white;
+  @media (max-width: 500px) {
+    font-size: 30px;
+  }
 `;
 
 const Projects = styled.div`

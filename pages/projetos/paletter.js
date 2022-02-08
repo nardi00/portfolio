@@ -9,8 +9,8 @@ import {
   reactLoader,
   cssLoader,
 } from "../../components/loader";
-
 import { motion } from "framer-motion";
+import Footer from '../../components/Footer'
 
 const MainContainer = styled(motion.main)`
   min-width: 100vw;
@@ -25,6 +25,9 @@ const MainContainer = styled(motion.main)`
     font-size: 25px;
     font-family: DM Sans;
     color: white;
+    @media (max-width: 500px) {
+      font-size: 18px;
+    }
     a {
       color: white;
     }
@@ -55,6 +58,9 @@ const Title = styled(motion.h1)`
   color: white;
   margin-bottom: 3rem;
   margin-top: 3rem;
+  @media (max-width: 500px) {
+    font-size: 25px;
+  }
 `;
 
 const transition = { duration: 0.6, ease: [0.6, 0.01, -0.05, 0.9] };
@@ -72,7 +78,12 @@ export default function paletter() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <MainContainer initial={{opacity: 0, x: -200, y: 0}} animate={{opacity: 1, x: 0, y: 0}} exit={{opacity: 0, x: 0, y: -100}} transition={transition} >
+      <MainContainer
+        initial={{ opacity: 0, x: -200, y: 0 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
+        exit={{ opacity: 0, x: 0, y: -100 }}
+        transition={transition}
+      >
         <div>
           <Image src={thumb} alt="thumbnail paletter" />
         </div>
@@ -127,6 +138,7 @@ export default function paletter() {
           </div>
         </motion.div>
       </MainContainer>
+      <Footer />
     </div>
   );
 }

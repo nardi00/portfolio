@@ -10,52 +10,58 @@ import {
   cssLoader,
 } from "../../components/loader";
 import { motion } from 'framer-motion'
+import Footer from '../../components/Footer'
 
 const MainContainer = styled(motion.main)`
-  min-width: 100vw;
-  min-height: 100vh;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  padding-left: 20%;
-  padding-right: 20%;
-  padding-top: 1rem;
-  .description-container {
-    font-size: 25px;
-    font-family: DM Sans;
-    color: white;
-    a {
-      color: white;
-    }
-    .details {
-      margin-top: 1rem;
-    }
-    .stack {
-      display: flex;
-      height: 100px;
-      margin-top: 1rem;
-      margin-top: 1rem;
-      a {
-        margin-left: 1rem;
-        margin-right: 1rem;
-      }
-    }
-  }
-  @media (max-width: 650px) {
-    padding-left: 12%;
-    padding-right: 12%;
-  }
-`;
-
-const Title = styled.h1`
-  font-size: 45px;
+min-width: 100vw;
+min-height: 100vh;
+flex-grow: 1;
+display: flex;
+flex-direction: column;
+padding-left: 20%;
+padding-right: 20%;
+padding-top: 1rem;
+.description-container {
+  font-size: 25px;
   font-family: DM Sans;
-  font-weight: 600;
   color: white;
-  margin-bottom: 3rem;
-  margin-top: 3rem;
+  @media (max-width: 500px) {
+    font-size: 18px;
+  }
+  a {
+    color: white;
+  }
+  .details {
+    margin-top: 1rem;
+  }
+  .stack {
+    display: flex;
+    height: 100px;
+    margin-top: 1rem;
+    margin-top: 1rem;
+    a {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+}
+@media (max-width: 650px) {
+  padding-left: 12%;
+  padding-right: 12%;
+}
 `;
 
+const Title = styled(motion.h1)`
+font-size: 45px;
+font-family: DM Sans;
+font-weight: 600;
+color: white;
+margin-bottom: 3rem;
+margin-top: 3rem;
+@media (max-width: 500px) {
+  font-size: 25px;
+}
+`;
 const transition = { duration: 0.6, ease: [0.6, 0.01, -0.05, 0.9] };
 
 export default function paletter() {
@@ -124,6 +130,7 @@ export default function paletter() {
           </div>
         </div>
       </MainContainer>
+      <Footer />
     </div>
   );
 }

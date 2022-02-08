@@ -35,6 +35,9 @@ const ProjectContainer = styled(motion.div)`
     justify-content: center;
     padding-right: 2rem;
     color: white;
+    @media(max-width: 500px) {
+      display: none;
+    }
   }
   .right-side {
     & > div {
@@ -48,6 +51,9 @@ const ProjectContainer = styled(motion.div)`
         font-size: 30px;
         font-weight: 400;
         cursor: pointer;
+        @media(max-width: 500px) {
+          font-size: 25px;
+        }
       }
     }
   }

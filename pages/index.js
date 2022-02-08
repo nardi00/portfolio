@@ -97,6 +97,9 @@ const Description = styled.div`
   @media (max-width: 660px) {
     font-size: 22px;
   }
+  @media(max-width: 414px) {
+    font-size: 17px;
+  }
 `;
 
 const Nav = styled.div`
@@ -129,7 +132,10 @@ const Button = styled.button`
     font-size: 25px;
   }
   @media (max-width: 660px) {
-    font-size: 20px;
+    font-size: 18px;
+  }
+  @media (max-width: 500px) {
+    font-size: 16px;
   }
 `;
 

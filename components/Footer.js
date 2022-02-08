@@ -15,6 +15,9 @@ const Links = styled.div`
     font-family: DM Sans;
     color: white;
     font-weight: 600;
+    @media(max-width: 500px) {
+      display: none;
+    }
   }
   & > a {
     color: white;
@@ -24,6 +27,9 @@ const Links = styled.div`
     & > p {
       font-family: Outfit;
       font-weight: 500;
+      @media(max-width: 500px) {
+      font-size: 13px;
+    }
     }
   }
 `;
