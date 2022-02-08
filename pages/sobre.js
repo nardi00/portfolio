@@ -3,8 +3,9 @@ import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import AboutContainer from "../components/AboutContainer";
 import SkillsContainer from "../components/SkillsContainer";
+import { motion } from "framer-motion";
 
-const MainContainer = styled.main`
+const MainContainer = styled(motion.main)`
   min-width: 100vw;
   min-height: 100vh;
   flex-grow: 1;
@@ -28,6 +29,9 @@ const About = styled.div`
   }
 `;
 
+const transition = { duration: 0.8, ease: [0.6, 0.01, -0.05, 0.9] };
+
+
 export default function about() {
   return (
     <div
@@ -36,7 +40,7 @@ export default function about() {
       }}
     >
       <Navbar />
-      <MainContainer>
+      <MainContainer initial={{opacity: 0, x: -200, y: 0}} animate={{opacity: 1, x: 0, y: 0}} exit={{opacity: 0, x: 0, y: -100}} transition={transition} >
         <About>
           <AboutContainer />
           <SkillsContainer />

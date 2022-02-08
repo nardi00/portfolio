@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import LinkIcon from "@mui/icons-material/Link";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { motion } from "framer-motion";
 
 const Links = styled.div`
   color: white;
@@ -15,12 +16,12 @@ const Links = styled.div`
   }
 `;
 
-const ProjectContainer = styled.div`
+const ProjectContainer = styled(motion.div)`
   max-width: 800px;
   max-height: 100%;
   display: flex;
-  margin-bottom: 1rem;
-  margin-top: 5rem;
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
   & > a {
     cursor: pointer;
   }
@@ -41,7 +42,7 @@ const ProjectContainer = styled.div`
       justify-content: space-between;
       align-items: center;
       color: white;
-      height: 75px;
+      cursor: pointer;
       h1 {
         font-family: Outfit;
         font-size: 30px;
@@ -52,6 +53,8 @@ const ProjectContainer = styled.div`
   }
 `;
 
+const transition = { duration: 0.8, ease: [0.6, 0.01, -0.05, 0.9] };
+
 export default function Project({
   title,
   number,
@@ -61,25 +64,27 @@ export default function Project({
   website,
 }) {
   return (
-    <ProjectContainer>
+    <ProjectContainer initial={{opacity: 0, x: -200, y: 0}} animate={{opacity: 1, x: 0, y: 0 }} transition={transition} >
       <div className="left-side">{number}</div>
       <div className="right-side">
-        <Link href={url} passHref>
-          <a>
-            <Image
-              src={thumbnail}
-              alt="thumbnail"
-              responsive
-              width={1500}
-              height={720}
-            />
-          </a>
+        <Link href={url} passHref scroll={false}>
+          <motion.div whileHover={{ scale: 1.05 }} transition={transition}>
+            <a>
+              <Image
+                src={thumbnail}
+                alt="thumbnail"
+                responsive
+                width={1500}
+                height={720}
+              />
+            </a>
+          </motion.div>
         </Link>
-        <div>
-          <Link href={url} passHref>
+        <motion.div exit={{opacity: 0}} transition={transition} >
+          <Link href={url} passHref scroll={false} >
             <h1>{title}</h1>
           </Link>
-          <Links>
+          <Links scroll={false} >
             <a href={githubURL}>
               <GitHubIcon fontSize="medium" />
             </a>
@@ -87,7 +92,7 @@ export default function Project({
               <LinkIcon fontSize="medium" />
             </a>
           </Links>
-        </div>
+        </motion.div>
       </div>
     </ProjectContainer>
   );

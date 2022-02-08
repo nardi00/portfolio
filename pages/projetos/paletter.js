@@ -10,7 +10,9 @@ import {
   cssLoader,
 } from "../../components/loader";
 
-const MainContainer = styled.main`
+import { motion } from "framer-motion";
+
+const MainContainer = styled(motion.main)`
   min-width: 100vw;
   min-height: 100vh;
   flex-grow: 1;
@@ -46,7 +48,7 @@ const MainContainer = styled.main`
   }
 `;
 
-const Title = styled.h1`
+const Title = styled(motion.h1)`
   font-size: 45px;
   font-family: DM Sans;
   font-weight: 600;
@@ -54,6 +56,8 @@ const Title = styled.h1`
   margin-bottom: 3rem;
   margin-top: 3rem;
 `;
+
+const transition = { duration: 0.6, ease: [0.6, 0.01, -0.05, 0.9] };
 
 export default function paletter() {
   return (
@@ -68,10 +72,12 @@ export default function paletter() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <MainContainer>
-        <Image src={thumb} alt="thumbnail paletter" />
+      <MainContainer initial={{opacity: 0, x: -200, y: 0}} animate={{opacity: 1, x: 0, y: 0}} exit={{opacity: 0, x: 0, y: -100}} transition={transition} >
+        <div>
+          <Image src={thumb} alt="thumbnail paletter" />
+        </div>
         <Title>Paletter</Title>
-        <div className="description-container">
+        <motion.div className="description-container">
           <p>
             Aplicação web que permite obter a paleta de cores através de uma
             imagem. O aplicativo tem uma ótima performance e o usuário recebe as
@@ -119,7 +125,7 @@ export default function paletter() {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
       </MainContainer>
     </div>
   );

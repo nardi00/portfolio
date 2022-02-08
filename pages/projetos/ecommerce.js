@@ -9,8 +9,9 @@ import {
   reactLoader,
   cssLoader,
 } from "../../components/loader";
+import { motion } from "framer-motion";
 
-const MainContainer = styled.main`
+const MainContainer = styled(motion.main)`
   min-width: 100vw;
   min-height: 100vh;
   flex-grow: 1;
@@ -55,6 +56,8 @@ const Title = styled.h1`
   margin-top: 3rem;
 `;
 
+const transition = { duration: 0.6, ease: [0.6, 0.01, -0.05, 0.9] };
+
 export default function paletter() {
   return (
     <div
@@ -68,7 +71,7 @@ export default function paletter() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <MainContainer>
+      <MainContainer initial={{opacity: 0, x: -200, y: 0}} animate={{opacity: 1, x: 0, y: 0}} exit={{opacity: 0, x: 0, y: -100}} transition={transition} >
         <Image src={thumb} alt="thumbnail paletter" />
         <Title>Recordrrr</Title>
         <div className="description-container">

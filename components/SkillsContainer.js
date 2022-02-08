@@ -14,6 +14,7 @@ import {
   figmaLoader,
   npmLoader,
 } from "./loader";
+import { motion } from "framer-motion";
 
 const SkillsContainer = styled.div`
   max-width: 800px;
@@ -63,7 +64,7 @@ export default function Skills() {
       <div className="right-side">
         <h1>Línguas e frameworks</h1>
         <div className="icons">
-          <a>
+          <motion.a whileHover={{scale: 1.1}} >
             <Image
               className="icon"
               loader={htmlLoader}
@@ -72,9 +73,9 @@ export default function Skills() {
               width={40}
               height={40}
             />
-          </a>
+          </motion.a>
 
-          <a>
+          <motion.a whileHover={{scale: 1.1}} >
             <Image
               className="icon"
               loader={cssLoader}
@@ -83,9 +84,9 @@ export default function Skills() {
               width={40}
               height={40}
             />
-          </a>
+          </motion.a>
 
-          <a>
+          <motion.a whileHover={{scale: 1.1}} >
             <Image
               className="icon"
               loader={javascriptLoader}
@@ -94,8 +95,8 @@ export default function Skills() {
               width={40}
               height={40}
             />
-          </a>
-          <a>
+          </motion.a>
+          <motion.a whileHover={{scale: 1.1}} >
             <Image
               className="icon"
               loader={reactLoader}
@@ -104,8 +105,8 @@ export default function Skills() {
               width={40}
               height={40}
             />
-          </a>
-          <a>
+          </motion.a>
+          <motion.a whileHover={{scale: 1.1}} >
             <Image
               className="icon"
               loader={typescriptLoader}
@@ -114,8 +115,8 @@ export default function Skills() {
               width={40}
               height={40}
             />
-          </a>
-          <a>
+          </motion.a>
+          <motion.a whileHover={{scale: 1.1}} >
             <Image
               className="icon"
               loader={pythonLoader}
@@ -124,11 +125,11 @@ export default function Skills() {
               width={40}
               height={40}
             />
-          </a>
+          </motion.a>
         </div>
         <h1>Ferramentas de desenvolvimento</h1>
         <div className="icons">
-          <a>
+          <motion.a whileHover={{scale: 1.1}} >
             <Image
               className="icon"
               loader={webpackLoader}
@@ -137,8 +138,8 @@ export default function Skills() {
               width={60}
               height={60}
             />
-          </a>
-          <a>
+          </motion.a>
+          <motion.a whileHover={{scale: 1.1}} >
             <Image
               className="icon"
               loader={babelLoader}
@@ -147,8 +148,8 @@ export default function Skills() {
               width={40}
               height={40}
             />
-          </a>
-          <a>
+          </motion.a>
+          <motion.a whileHover={{scale: 1.1}} >
             <Image
               className="icon"
               loader={gitLoader}
@@ -157,8 +158,8 @@ export default function Skills() {
               width={40}
               height={40}
             />
-          </a>
-          <a>
+          </motion.a>
+          <motion.a whileHover={{scale: 1.1}} >
             <Image
               className="icon"
               loader={figmaLoader}
@@ -167,8 +168,8 @@ export default function Skills() {
               width={40}
               height={40}
             />
-          </a>
-          <a>
+          </motion.a>
+          <motion.a whileHover={{scale: 1.1}} >
             <Image
               className="icon"
               loader={npmLoader}
@@ -177,7 +178,7 @@ export default function Skills() {
               width={40}
               height={40}
             />
-          </a>
+          </motion.a>
         </div>
       </div>
     </SkillsContainer>

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { motion } from 'framer-motion'
 
 const Screen = styled.div`
   min-width: 100vw;
@@ -52,7 +53,7 @@ const Contact = styled.button`
   }
 `;
 
-const MainContainer = styled.main`
+const MainContainer = styled(motion.main)`
   min-width: 100%;
   min-height: 100%;
   flex-grow: 1;
@@ -132,6 +133,8 @@ const Button = styled.button`
   }
 `;
 
+const transition = { duration: 0.8, ease: [0.6, 0.01, -0.05, 0.9] };
+
 export default function Home() {
   return (
     <Screen>
@@ -164,11 +167,11 @@ export default function Home() {
         </Contact>
       </Header>
 
-      <MainContainer>
+      <MainContainer initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={transition}>
         <Main>
           <Title>/GUILHERME NARDI</Title>
           <Description>
-            Front-end developer based in <strong>São Paulo, Brazil</strong>
+            Front-end developer based in <strong>São Paulo, Brasil</strong>
           </Description>
           <Nav>
             <Link href="/sobre" passHref>
