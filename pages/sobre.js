@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import AboutContainer from "../components/AboutContainer";
 import SkillsContainer from "../components/SkillsContainer";
 import { motion } from "framer-motion";
+import Footer from '../components/Footer'
 
 const MainContainer = styled(motion.main)`
   min-width: 100vw;
@@ -46,6 +47,7 @@ export default function about() {
           <SkillsContainer />
         </About>
       </MainContainer>
+      <Footer />
     </div>
   );
 }
