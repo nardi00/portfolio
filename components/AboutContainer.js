@@ -18,7 +18,7 @@ const AboutContainer = styled.div`
     padding-right: 2rem;
     color: white;
     border-right: 1px solid white;
-    @media(max-width: 500px) {
+    @media(max-width: 1300px) {
       display: none;
     }
   }
@@ -27,9 +27,18 @@ const AboutContainer = styled.div`
     font-family: DM Sans;
     font-weight: 600;
     color: white;
-    max-width: 600px;
+    width: 600px;
+    @media(max-width: 1000px) {
+      width: 400px;
+      font-size: 22px;
+    }
     @media(max-width: 500px) {
       font-size: 18px;
+      width: 350px;
+    }
+    @media(max-width: 430px) {
+      font-size: 15px;
+      width: 250px;
     }
   }
 `;
