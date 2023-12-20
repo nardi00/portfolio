@@ -53,8 +53,7 @@ export default function About() {
           pelo processo criativo de desenvolver interfaces visualmente
           atrativas. Atualmente procuro oportunidades de aprender novos
           conceitos, tecnologias e ferramentas a fim de criar a melhor
-          experiência possível. Fora do mundo tecnológico, gosto de filmes,
-          música e idiomas.{" "}
+          experiência possível. " "}
         </p>
       </div>
     </AboutContainer>
